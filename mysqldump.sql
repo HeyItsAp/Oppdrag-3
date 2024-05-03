@@ -67,3 +67,7 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 INSERT INTO `brukere` (`passord`, `Admin`, `brukernavn`, `navn`) VALUES ('Admin', '1', 'Admin', 'Admin');
 
+CREATE USER adminUser@localhost IDENTIFIED BY 'admin123';
+GRANT ALL PRIVILEGES ON *.* TO 'adminUser'@localhost IDENTIFIED BY 'admin123';
+
+
